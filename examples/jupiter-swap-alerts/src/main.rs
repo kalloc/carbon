@@ -108,11 +108,28 @@ impl Processor for JupiterSwapInstructionProcessor {
             JupiterSwapInstruction::ClaimToken(claim_token) => {
                 log::info!("claim_token: signature: {signature}, claim_token: {claim_token:?}");
             }
-            JupiterSwapInstruction::CreateOpenOrders(create_open_orders) => {
-                log::info!("create_open_orders: signature: {signature}, create_open_orders: {create_open_orders:?}");
+            JupiterSwapInstruction::CreateTokenAccount(create_token_account) => {
+                log::info!("create_token_account: signature: {signature}, create_token_account: {create_token_account:?}");
             }
-            JupiterSwapInstruction::CreateProgramOpenOrders(create_program_open_orders) => {
-                log::info!("create_program_open_orders: signature: {signature}, create_program_open_orders: {create_program_open_orders:?}");
+            JupiterSwapInstruction::CloseToken(close_token) => {
+                log::info!("close_token: signature: {signature}, close_token: {close_token:?}");
+            }
+            JupiterSwapInstruction::ExactOutRouteV2(exact_out_route_v2) => {
+                log::info!("exact_out_route_v2: signature: {signature}, exact_out_route_v2: {exact_out_route_v2:?}");
+            }
+            JupiterSwapInstruction::RouteV2(route_v2) => {
+                log::info!("route_v2: signature: {signature}, route_v2: {route_v2:?}");
+            }
+            JupiterSwapInstruction::SharedAccountsExactOutRouteV2(
+                shared_accounts_exact_out_route_v2,
+            ) => {
+                log::info!("shared_accounts_exact_out_route_v2: signature: {signature}, shared_accounts_exact_out_route_v2: {shared_accounts_exact_out_route_v2:?}");
+            }
+            JupiterSwapInstruction::SharedAccountsRouteV2(shared_accounts_route_v2) => {
+                log::info!("shared_accounts_route_v2: signature: {signature}, shared_accounts_route_v2: {shared_accounts_route_v2:?}");
+            }
+            JupiterSwapInstruction::SwapsEvent(swaps_event) => {
+                log::info!("swaps_event: signature: {signature}, swaps_event: {swaps_event:?}");
             }
             JupiterSwapInstruction::CreateTokenLedger(create_token_ledger) => {
                 log::info!("create_token_ledger: signature: {signature}, create_token_ledger: {create_token_ledger:?}");
